@@ -219,9 +219,9 @@ input{
     margin-right: 0;
     padding: 18px;
   }
-  .animehead { display: none; } /* optional: hide marquee on very small screens */
+   /* optional: hide marquee on very small screens */
   #plus { right: 12px; bottom: 12px; font-size: 20px; padding: 8px 12px; }
-  #addingbookform { top: 8%; }
+  #addingbookform { top: 5%;left:8%; }
 }
 
 /* TABLET: 601 - 900px — two columns */
@@ -246,3 +246,4 @@ input{
     width: calc(25% - 1.25%);
   }
 }
+
