@@ -1,0 +1,248 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+header{
+    background-color: #FD6569;
+    color:black;
+    padding: 10px;
+}
+header image{
+  border-radius:100%;
+  border: none;
+
+}
+h1{
+  display: flex;
+  align-items:center;
+  gap: 30px;
+}
+.frontpage{
+  background-color: white;
+  position: relative;
+  margin-bottom: 20px;
+  height: 50px;
+  
+}
+.animehead{
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   background-color: yellow;
+   color: black;
+   padding: 10px;
+
+}
+.animate-text
+{
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 21s linear infinite;
+    padding-left: 100%;
+    margin-left: 25px;
+}
+.animate-text span {
+    display: inline-block;
+    padding: 0 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0%);
+        transition-delay: 0s;
+    }
+    100% {
+        transform: translateX(-100%);
+        transition-delay: 0s;
+    }
+}
+.bookbox{
+  padding: 30px;
+  width: 30%;
+  background-color: black;
+  color:white;
+  border-radius: 1rem;
+  margin-left: 10px;
+  margin-top: 20px;
+  display:inline-block;
+  vertical-align: top;
+  
+}
+.bookbox h2, 
+.bookbox h4{
+  color: #FD6569;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+}
+
+
+.bookbox button{
+  background-color: #FD6569;
+  color: black;
+  border-radius: 10px;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.bookbox:active{
+  background-color: blue;
+  color:lawngreen;
+  transition-property: all;
+  transition-duration: 2s;
+}
+#plus{
+  
+ 
+  background-color: #FD6569;
+  color: black;
+  border-radius: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size:xx-large;
+  margin-left: 88%;
+  margin-top: 22%;
+  cursor: pointer;
+  border:none;
+  position:fixed;
+  transition-property: all;
+  transition-duration: 3s;
+}
+
+#plus:hover{
+  background-color: blue;
+  color: #FD6569;
+  transform: rotate(180deg);
+  transition: 2s;
+}
+#addingbookform{
+  background-color: #FD6569;
+  position: absolute;
+  color: black;
+  width: 40%;
+  top: 20%;
+  left: 25%;
+  padding: 30px;
+  margin-left: 30px;
+  border-radius: 10px;
+  border: none;
+  border-bottom:1px solid black;
+  display: none;
+  z-index: 3;
+  
+
+}
+#bookformname ,#bookformauthorname  {
+  background-color: transparent;
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  font-size: 20px;
+  border-bottom: 2px dotted black;
+  box-sizing: border-box;
+}
+#description{
+  background-color: transparent;
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  font-size: 20px;
+  border:1px solid black;
+  box-sizing: border-box;
+}
+#bookformname::placeholder,
+#bookformauthorname::placeholder  , 
+#description::placeholder
+
+{
+  color: black;
+  font-size: medium;
+} 
+#bookformname:focus,
+#bookformauthorname:focus  , 
+#description:focus{
+  outline: none;
+}
+
+#add,#cancel{
+   background-color: black;
+   color: white;
+   padding:5px ;
+   margin-left: 5px;
+   font-size: medium;
+   border-radius: 20%;
+}
+#shade{
+  background-color: black;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  bottom: 0%;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+.btn{
+  background-color:transparent;
+  border: none;
+  border-radius: 90%;
+  font-size: 25px;
+  cursor: pointer;  
+}
+
+input{
+  background-color: black;
+  color: aliceblue;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+}
+/* PHONE: 0 - 600px — single column */
+@media (max-width: 600px) {
+  .bookbox {
+    width: 100%;
+    margin-right: 0;
+    padding: 18px;
+  }
+  .animehead { display: none; } /* optional: hide marquee on very small screens */
+  #plus { right: 12px; bottom: 12px; font-size: 20px; padding: 8px 12px; }
+  #addingbookform { top: 8%; }
+}
+
+/* TABLET: 601 - 900px — two columns */
+@media (min-width: 601px) and (max-width: 900px) {
+  .bookbox {
+    width: calc(50% - 1.25%);
+  }
+  .animate-text { font-size: 0.95rem; }
+  #addingbookform { top: 10%; }
+}
+
+/* LAPTOP: 901 - 1200px — three columns (slightly larger cards) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .bookbox {
+    width: calc(33.333% - 1.25%);
+  }
+}
+
+/* DESKTOP LARGE: >1200px — four columns */
+@media (min-width: 1201px) {
+  .bookbox {
+    width: calc(25% - 1.25%);
+  }
+}
